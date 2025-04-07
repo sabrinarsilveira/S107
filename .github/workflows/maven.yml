@@ -72,5 +72,7 @@ jobs:
               distribution: 'temurin'
               cache: maven
           - name: Notification
+            env:
+              EMAIL_DESTINATARIO: ${{ secrets.EMAIL_DESTINATARIO }}
             run: sh Scripts/notification.sh
 
